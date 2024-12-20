@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .order-details {
+            margin-top: 50px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        img {
+            width: 300px;
+            border-radius: 10px;
+        }
+        .button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: brown;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+
+
+    <h1>Order Placed!</h1>
+    <div class="order-details">
+        <h2 id="title"></h2>
+        <img id="image" alt="Coffee Image">
+        <p id="description"></p>
+        <h4 id="ingredients"></h4>
+    </div>
+    <a href="./main.html" class="button">Back to Menu</a>
+
+    <script>
+        // Get the selected coffee details from localStorage
+        const coffee = JSON.parse(localStorage.getItem("selectedCoffee"));
+
+        // Populate the order details
+        document.getElementsByTagName("di").innerText = coffee.title;
+        document.getElementById("image").setAttribute("src", coffee.image || "");
+        document.getElementById("description").innerText = coffee.description;
+        document.getElementById("ingredients").innerText = "Ingredients: " + coffee.ingredients.join(", ");
+
+    </script>
+</body>
+</html>

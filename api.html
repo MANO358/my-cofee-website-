@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Styling the parent container */
+#parent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    background-color: lightgray;
+}
+
+/* Styling individual coffee cards */
+#parent > div {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Coffee title */
+#parent h1 {
+    font-size: 1.5rem;
+    color: brown;
+    margin-bottom: 10px;
+}
+
+/* Coffee image */
+#parent img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Coffee description */
+#parent p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Coffee ingredients */
+#parent h4 {
+    font-size: 0.9rem;
+    color: darkgreen;
+}
+
+    </style>
+</head>
+
+<body>
+    <div id="parent"> </div>
+
+
+
+    <script>
+
+    //     let parent=document.getElementById("parent")
+    //     let coffeeData = JSON.parse(localStorage.getItem("coffeeData"));
+
+    //     let child=document.createElement("div")
+    //     let child2=document.createElement("h1")
+    //     let child3=document.createElement("h1")
+    //     let child4=document.createElement("img")
+    //     // child4.setAttribute("Src",)
+    //     let child5=document.createElement("p")
+    //     let child6=document.createElement("h4")
+        
+
+    //     // localStorage.getItem("id")
+
+    //     child.append(child2,child3,child4,child5,child6)
+    //     parent.append(child)
+    //     // console.log(parent)
+
+
+    //   let l1=localStorage.getItem("id")
+    //   let l2=localStorage.getItem("title")
+    //   let l3=localStorage.getItem("image")
+    //   let l4=localStorage.getItem("description")
+    //   let l5=localStorage.getItem("ingredients")
+
+
+    //   child2.innerText=l1
+    //   child3.innerText=l2
+    //   if (l3) {
+    //         child4.setAttribute("src", l3); // Set the src attribute for the image
+    //         child4.setAttribute("alt", "lemonad image"); // Set alt for accessibility
+    //     } else {
+    //         child4.setAttribute("alt", "No image available");
+    //     }
+    //   child5.innerText=l4
+    //   child6.innerText=l5
+
+
+    let parent = document.getElementById("parent");
+let coffeeData = JSON.parse(localStorage.getItem("coffeeData"));
+
+coffeeData.forEach((item) => {
+    let child = document.createElement("div");
+
+    let title = document.createElement("h1");
+    title.innerText = item.title;
+
+    let description = document.createElement("p");
+    description.innerText = item.description;
+
+    let image = document.createElement("img");
+    image.setAttribute("src", item.image || "");
+    image.setAttribute("alt", "Coffee Image");
+
+    let ingredients = document.createElement("h4");
+    ingredients.innerText = "Ingredients: " + item.ingredients.join(", ");
+     
+    let button =document.createElement("button")
+    button.innerText="Add"
+    button.style.backgroundColor="brown"
+    button.style.color="white"
+
+
+    button.addEventListener(("click"),()=>{
+        window.open("order.html","_self")
+
+    })
+    child.append(title, image, description, ingredients ,button);
+    parent.appendChild(child);
+
+    
+});
+
+
+// let i=document.getElementsByTagName("img")
+// i.addEventListener(("Click"),()=>{
+//     window.open("./order.html","_self")
+
+// })
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,348 @@
+*{
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+   margin:0;
+   padding: 0;
+   font-family: "poppins","sans-serif";
+}
+#navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: brown;
+    height: 12vh;
+    font-size: large;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+
+}
+b{
+    color: white;
+    padding: 10px;
+    font-size: x-large;
+    /* margin-left: 5px; */
+
+}
+
+li{
+    justify-content: space-between;
+    list-style: none;
+    padding: 10px;
+    color: white;
+    display: inline-block;
+    /* text-decoration: none; */
+    /* background-color: burlywood; */
+    border-radius: 25%;
+    margin-right: 20px;
+    transition: 0.3 ease;
+   
+}
+.navlist>a{
+    text-decoration: none;
+    /* padding: 10px;
+    gap: 10px; */
+    color:white;
+  padding: 10px;
+}
+/* a{
+  text-decoration: none;
+  color:white;
+  padding: 10px; */
+  
+
+/* } */
+li:hover{
+    background-color: burlywood;
+    transition: 0.3 ease;
+   
+}
+
+
+ul:hover{
+    background-color: brown;
+    size: 100px;
+}
+/* h1:hover{
+    background-color: beige;
+} */
+
+
+.hero-section{
+    height: 100vh;
+    background-color: brown;
+}
+.hero-section .section-content{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    color: whitesmoke;
+    justify-content: space-between;
+
+}.hero-section .hero-details .title{
+    font-size: xx-large;
+    font-style: italic;
+    
+    color: darkgoldenrod;
+    font-family: "Miniver" , sans-serif;
+    font-weight: 900;
+}
+
+.hero-section .hero-details .subtitle{
+    margin-top: 9px;
+    max-width: 70%;
+    font-size: x-large;
+    font-weight: bold;
+
+}
+
+.hero-section .hero-details .description{
+    font-size: medium;
+    max-width: 70%;
+    margin: 25px 0 40px;
+}
+
+/* .hero-section .hero-details .button{
+    display: flex;
+    gap: 24px;
+} */
+
+
+.hero-section .hero-details .button{
+    padding: 10px 26px;
+    background-color: burlywood;
+    color: black;
+    border-radius:20px ;
+    font-weight: medium;
+    border: 2px solid transparent;
+    text-decoration: none;
+    gap: 23px;
+    transition: 0.3 ease ;
+
+
+    
+
+    /* border: 2px solid transparent;
+    color: wheat;
+    border-radius:10px; */
+    /* background:lightgray;
+    padding: 20px;
+    font-weight: medium; */
+}
+/* 
+.hero-section .hero-image-wrapper{
+    max-width: 500px;
+    margin-right: 30px;
+}  */
+
+
+.hero-section .hero-details .button:hover, .hero-section .hero-details .contact-us{
+    color: white;
+    border-color: white;
+    background-color: transparent;
+}
+
+.hero-section .hero-details .contact-us:hover{
+    color: black;
+    border-color: bisque;
+    /* background-color: burlywood; */
+    background-color: transparent;
+    transition: 0.3 ease;
+
+}
+
+
+.about-section{
+    padding: 120px 0;
+    background-color: lightgray;
+}
+.about-section .section-content{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.about-section .about-image-wrapper .about-image{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius:50% ;
+
+
+}
+.section-title{
+    text-align: center;
+    padding: 6px 0 100px;
+    font-size: x-large;
+    text-transform: uppercase;
+
+}
+
+
+.section-title:after{
+    content: "";
+    width: 80px;
+    height: 5px;
+    display: block;
+    margin: 10px auto 0;
+    border-radius:4px;
+    background-color: burlywood;
+
+
+}
+
+.about-section .about-details .text{
+    line-height: 30px;
+    margin:50px 0 30px;
+    text-align: center;
+    font: medium;
+} 
+ 
+
+.about-section .social-link-list{
+    /* align-items: center; */
+    display: flex;
+
+    justify-content: center;
+    gap: 25px;
+}
+
+.about-section .about-details .section-title{
+    padding: 0;
+}
+
+.menu-section .menu-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    align-items: center;
+}
+.menu-section .menu-list .menu-item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 320px;
+}
+
+.menu-section .menu-list .menu-item .menu-image{
+    max-width: 82%;
+    aspect-ratio: 1;
+    /* text-align: center; */
+
+}
+/* 
+.name .text{
+    
+    gap: 10px;
+    text-align: center;
+} */
+
+/* testimonials section */
+.testimonials-section{
+    padding: 50px 0 100px;
+    background-color:lightgray ;
+}
+.testimonials-section .testimonial .user-image{
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 50px;
+    border-radius: 50%;
+}
+
+.testimonials-section .testimonial{
+    display: flex;
+    padding: 30px;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+.name{
+    font-size: medium;
+}
+/* contact us */
+
+.contact-section{
+    padding: 50px 0 100px;
+    background-color: darkslategray;
+
+}
+.contact-section .section-content
+{
+    display: flex;
+    gap:50px ;
+    align-items: flex-start;
+}
+.contact-section .contact-info-list .contact-info{
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+    align-items: center;
+    font-size: medium;
+}
+    
+
+
+.contact-info-list{
+    margin-left: 40%;
+}
+
+/* Footer section */
+.footer-section {
+    padding: 20px 0;
+    background-color:darkslateblue ;
+    color: white;
+}
+.social-link .policy-link{
+    color: white;
+}
+
+
+ 
+
+
+@media only screen and (max-width:900px){
+
+    .navbar .navlist{
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 300px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 100px;
+        background-color: white;
+
+
+    }
+    .navbar .navlist,li{
+        color: wheat;
+        display: block;
+        margin-top: 18px;
+        font-size: large;
+    }
+    .hero-section .section-content{
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 50px;
+        text-align: center;
+        padding: 30px 20px 30px;
+
+
+    }
+    .hero-section .hero-image-wrapper{
+        max-width: 270px;
+        margin-right: 0;
+
+
+    }
+
+}
+
+
